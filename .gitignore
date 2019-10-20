@@ -1,4 +1,5 @@
-validString/out/
-validString/.idea/
+validString/out/*
+validString/.idea/*
+validString/.DS_Store
+validString/validString.iml
 .DS_Store
-validString.iml
