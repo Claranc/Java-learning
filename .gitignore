@@ -1,3 +1,6 @@
 validArithmetic/*
 !validArithmetic/src
+socket/*
+!socket/src
+!socket/s:erver
 .DS_Store
