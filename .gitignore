@@ -2,5 +2,5 @@ validArithmetic/*
 !validArithmetic/src
 socket/*
 !socket/src
-!socket/s:erver
+!socket/server
 .DS_Store
