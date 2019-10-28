@@ -1,4 +1,4 @@
 */*
 !*/src
 .DS_Store
-!socket/server/*.java
+!socket/server/*
