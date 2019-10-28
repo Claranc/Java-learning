@@ -1,6 +1,3 @@
-validArithmetic/*
-!validArithmetic/src
-socket/*
-!socket/src
-!socket/server
+*/*
+!*/src
 .DS_Store
