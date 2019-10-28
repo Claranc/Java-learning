@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 import java.io.*;
 
 public class FileAnalysis {
@@ -21,7 +23,7 @@ public class FileAnalysis {
         }
     }
 
-    private void SearchFromFile(String target, String filePath) throws IOException {
+    public void SearchFromFile(String target, String filePath) throws IOException {
         File file = new File(filePath);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
