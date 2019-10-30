@@ -2,5 +2,5 @@
 !*/src
 .DS_Store
 !socket/server/*
-!Thread/FixedThreadPool/src
-!Thread/ThreadPool/src
+!thread/FixedThreadPool/*
+!thread/ThreadPool/*
