@@ -21,7 +21,6 @@ public class ThreadAdded implements Runnable {
 
         File file = new File(path);
         File[] lists = file.listFiles();
-        assert lists != null;
         for (File list : lists) {
             if (list.isFile()) {
                 //System.out.println("文件：" + lists[i]);
