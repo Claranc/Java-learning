@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FixedThreadPool/FixedThreadPool.iml" filepath="$PROJECT_DIR$/FixedThreadPool/FixedThreadPool.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThreadPool/ThreadPool.iml" filepath="$PROJECT_DIR$/ThreadPool/ThreadPool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/queque/queque.iml" filepath="$PROJECT_DIR$/queque/queque.iml" />
       <module fileurl="file://$PROJECT_DIR$/thread.iml" filepath="$PROJECT_DIR$/thread.iml" />
     </modules>
   </component>
