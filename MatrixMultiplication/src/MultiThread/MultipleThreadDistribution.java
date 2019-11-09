@@ -1,47 +1,43 @@
-package MultipleThread;
+package MultiThread;
 
-import java.util.concurrent.ThreadPoolExecutor;
+import Matrix.Matrix;
+import javafx.util.Pair;
+
+import java.util.Queue;
 import java.util.concurrent.locks.Lock;
 
-public class MultipleThread implements Runnable {
-    public ThreadPoolExecutor executor;
+public class MultipleThreadDistribution implements Runnable {
     private Matrix m1;
     private Matrix m2;
-    private CurrentLocation cl;
+    private Queue<Pair<Integer, Integer>> index;
     private Lock mu;
     private int batch;
     private int[][] result;
 
-    MultipleThread(Matrix m1, Matrix m2, Lock mu, CurrentLocation cl, int batch, int[][] result, ThreadPoolExecutor exe) {
+    MultipleThreadDistribution(Matrix m1, Matrix m2, Lock mu, Queue<Pair<Integer, Integer>> in, int batch, int[][] result) {
         this.m1 = m1;
         this.m2 = m2;
         this.mu = mu;
-        this.cl = cl;
+        this.index = in;
         this.batch = batch;
         this.result = result;
-        executor = exe;
     }
 
     @Override
     public void run() {
-        String str = cl.GetIndex();
-        String[] index = str.split("#");
-        int i = Integer.parseInt(index[0]);
-        int j = Integer.parseInt(index[1]);
-        if (i + j > 2 * batch * batch - 2 * batch) {
-            for (int p = 0; p < batch * batch; p++) {
-                for (int q = 0; q < batch * batch; q++) {
-                    System.out.printf("%d ", result[p][q]);
-                }
-                System.out.println();
+        while (true) {
+            mu.lock();
+            Pair<Integer, Integer> cur = index.poll();
+            if(cur == null) {
+                mu.unlock();
+                break;
             }
-            return;
-        } else {
-            MultipleThread mt = new MultipleThread(m1, m2, mu, cl, batch, result, executor);
-            executor.execute(mt);
+            int i = cur.getKey();
+            int j = cur.getValue();
+            mu.unlock();
+            System.out.println("i,j = " + i +" " + j);
+            MatrixMultiplication(i, j);
         }
-
-        MatrixMultiplication(i, j);
     }
 
     public void MatrixMultiplication(int i, int j) {
@@ -60,6 +56,9 @@ public class MultipleThread implements Runnable {
             t = System.currentTimeMillis() - t;
             //System.out.println(String.format("(%d,%d,%d) %d", i, j, k, t));
         }
+    }
 
+    public void Start() {
+        run();
     }
 }

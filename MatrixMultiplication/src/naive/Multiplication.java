@@ -1,5 +1,7 @@
 package naive;
 
+import Matrix.Matrix;
+
 public class Multiplication {
     private int SIZE;
     Multiplication(int SIZE) {

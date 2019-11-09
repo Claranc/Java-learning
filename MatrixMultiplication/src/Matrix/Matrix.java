@@ -1,4 +1,4 @@
-package naive;
+package Matrix;
 
 import cache.LRUCache;
 
@@ -18,16 +18,17 @@ public class Matrix {
     public void randomFill(int bound) {
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(bound);
+//            arr[i] = random.nextInt(bound);
+            arr[i] = i;
         }
     }
 
     public int getEle(int i, int j) {
-        try {
-            Thread.sleep(1);
-        } catch(InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(1);
+//        } catch(InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return arr[i * dim + j];
     }
 

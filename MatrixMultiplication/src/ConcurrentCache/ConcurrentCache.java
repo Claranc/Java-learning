@@ -1,10 +1,12 @@
-package cache;
+package ConcurrentCache;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class LRUCache {
+public class ConcurrentCache {
     public class Node {
         public int key;
         public int value;
@@ -16,21 +18,20 @@ public class LRUCache {
         }
     }
 
-    private HashMap<Integer, Node> Map = new HashMap<>();
+    private ConcurrentHashMap<Integer, Node> Map = new ConcurrentHashMap<>();
     private int cap;
     private int length = 0;
     private Node first;
     private Node tail;
-    public LRUCache(int capacity) {
+    public ConcurrentCache(int capacity) {
         cap = capacity;
     }
     private Lock mu = new ReentrantLock();
 
     public int get(int key) {
         mu.lock();
-        //System.out.println("get: " + key);
         Node p = Map.get(key);
-        if(p == null) {
+        if(p == null || length == 0) {
             mu.unlock();
             return -1;
         }
@@ -52,7 +53,6 @@ public class LRUCache {
 
     public void put(int key, int value) {
         mu.lock();
-        //System.out.println("put: " + key + " " + value);
         Node p = Map.get(key);
         if (p != null) {
             if(p != first) {
@@ -90,10 +90,5 @@ public class LRUCache {
             length--;
         }
         mu.unlock();
-//        Node cur = first;
-//        for(int x = 0; x < length; x++) {
-//            System.out.println(cur.key + " " + cur.next  + " " + cur.prev);
-//            cur = cur.next;
-//        }
     }
 }

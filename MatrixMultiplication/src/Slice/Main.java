@@ -1,8 +1,9 @@
+package Slice;
+
 import Matrix.Matrix;
-import Slice.Multiplication;
 
 public class Main {
-    private static final int SIZE = 4;
+    private static final int SIZE = 1024;
 
     public static void main(String[] args) {
         //生成第一个矩阵

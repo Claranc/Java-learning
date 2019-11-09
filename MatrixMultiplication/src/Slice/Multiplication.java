@@ -1,6 +1,10 @@
+package Slice;
+
+import Matrix.Matrix;
+
 public class Multiplication {
     private int SIZE;
-    Multiplication(int SIZE) {
+    public Multiplication(int SIZE) {
         this.SIZE = SIZE;
     }
 

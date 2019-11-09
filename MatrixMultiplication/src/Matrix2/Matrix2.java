@@ -1,33 +1,34 @@
-package MultipleThread;
+package Matrix2;
 
-import cache.LRUCache;
+import ConcurrentCache.ConcurrentCache;
 
 import java.util.Random;
 
-public class Matrix {
+public class Matrix2 {
     private int dim;
     private int[] arr;
-    private LRUCache cache;
+    private ConcurrentCache cache;
 
-    public Matrix(int dim) {
+    public Matrix2(int dim) {
         this.dim = dim;
         arr = new int[dim * dim];
-        cache = new LRUCache(dim);
+        cache = new ConcurrentCache(dim);
     }
 
     public void randomFill(int bound) {
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(bound);
+//            arr[i] = random.nextInt(bound);
+            arr[i] = i;
         }
     }
 
     public int getEle(int i, int j) {
-        try {
-            Thread.sleep(1);
-        } catch(InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(1);
+//        } catch(InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return arr[i * dim + j];
     }
 
