@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edda477e-8b19-4fe5-afc1-07941defc3b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ConcurrentCache/ConcurrentCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MultiThread/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MultiThreadFixedCache/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MultiThreadFixedCache/MultiThreadFixedCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MultiThreadFixedCache/MultiThreadFixedCache2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Slice/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mailbox/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mailbox/Mailbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mailbox/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mailbox/Provider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MatrixMultiplication/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/MultipleThread/CurrentLocation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/MultipleThread/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/MultipleThread/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/MultipleThread/MultipleThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/Multiplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/cache/LRUCache$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MatrixMultiplication/cache/LRUCache$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/cache/LRUCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MatrixMultiplication/cache/LRUCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/naive/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MatrixMultiplication/naive/Multiplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MatrixMultiplication/naive/Multiplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Matrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultipleThread/CurrentLocation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultipleThread/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultipleThread/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix2/Matrix2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultipleThread/MultipleThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiThread/MultipleThreadDistribution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Multiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Slice/Multiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cache/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cache/LRUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/naive/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Matrix/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/naive/Multiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/naive/Multiplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (4)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MultiThreadFixedCache.Main" />
       <module name="MatrixMultiplication" />
@@ -124,6 +101,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="MultipleThreadDistribution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Mailbox.Main" />
+      <module name="MatrixMultiplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Mailbox.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -179,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (4)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +194,10 @@
       <workItem from="1573007754937" duration="2521000" />
       <workItem from="1573133462569" duration="9353000" />
       <workItem from="1573220779039" duration="5843000" />
-      <workItem from="1573269817817" duration="9532000" />
+      <workItem from="1573269817817" duration="9941000" />
+      <workItem from="1573653038547" duration="1506000" />
+      <workItem from="1573700005427" duration="2327000" />
+      <workItem from="1573732805550" duration="5942000" />
     </task>
     <servers />
   </component>
