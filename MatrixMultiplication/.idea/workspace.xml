@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edda477e-8b19-4fe5-afc1-07941defc3b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Mailbox/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mailbox/Mailbox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mailbox/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mailbox/Provider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mailbox/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mailbox/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mailbox/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mailbox/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mailbox/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mailbox/Provider.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,6 +197,7 @@
       <workItem from="1573653038547" duration="1506000" />
       <workItem from="1573700005427" duration="2327000" />
       <workItem from="1573732805550" duration="5942000" />
+      <workItem from="1573999429001" duration="426000" />
     </task>
     <servers />
   </component>
