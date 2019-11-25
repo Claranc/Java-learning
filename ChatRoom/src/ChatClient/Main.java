@@ -22,6 +22,16 @@ public class Main {
 
             //开启新线程，实时读取服务端返回数据
             InputStream inputStream = socket.getInputStream();
+            byte[] recv = new byte[1024];
+            int len = inputStream.read(recv);
+            if (len != -1) {
+                String recvMsg = new String(recv, 0, len);
+                if(recvMsg.equals("login wrong")) {
+                    System.out.println("login wrong");
+                    System.exit(-1);
+                }
+            }
+
             Thread t = new Thread(new ChatClient(socket));
             t.setDaemon(true);
             t.start();
